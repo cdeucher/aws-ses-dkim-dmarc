@@ -1,6 +1,11 @@
 ![DMARC](DMARC_author-to-recipient_flow.jpg)
 
 ---
+`MX` : Is set up to receive emails
+``
+
+
+---
 `DKIM` : DomainKeys Identified Mail (DKIM) is an email security standard designed to make sure that an email that claims to have come from a specific domain was indeed authorized by the owner of that domain.
 
 - [Specification](https://docs.aws.amazon.com/ses/latest/dg/send-email-authentication-dkim.html)
