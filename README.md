@@ -2,7 +2,6 @@
 
 ---
 `MX` : Is set up to receive emails
-``
 
 
 ---
