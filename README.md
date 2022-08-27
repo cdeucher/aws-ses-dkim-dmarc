@@ -7,7 +7,8 @@
 ---
 `DKIM` : Validate the domain.
       DomainKeys Identified Mail (DKIM) is an email security standard designed to make sure that an email that claims to have come from a specific domain was indeed authorized by the owner of that domain.
-      `DKIM authentication can only be set at the domain level.` 
+      
+      DKIM authentication can only be set at the domain level. 
 
 - [Specification](https://docs.aws.amazon.com/ses/latest/dg/send-email-authentication-dkim.html)
 
@@ -15,7 +16,6 @@
 `SPF` : Validate the sender.
       Sender Policy Framework (SPF) is an email validation standard that's designed to prevent email spoofing. 
       Domain owners use SPF to tell email providers which servers are allowed to send email from their domains. 
-- Email spoofing: I's a technique used in spam and phishing attacks to trick users into thinking a message came from a person or entity they either know or can trust.
 
 example: `<subdomain>.<domain>	TXT	"v=spf1 include:example.com include:amazonses.com ~all"`
 - [Specification](https://docs.aws.amazon.com/ses/latest/dg/send-email-authentication-spf.html)
@@ -23,6 +23,8 @@ example: `<subdomain>.<domain>	TXT	"v=spf1 include:example.com include:amazonses
 ---
 `DMARC` : Domain-based Message Authentication, Reporting and Conformance (DMARC) is an email authentication protocol that uses Sender Policy Framework (SPF) and DomainKeys Identified Mail (DKIM) to detect email spoofing. 
       In order to comply with DMARC, messages must be authenticated through either SPF or DKIM, or both.
+      
+      Email spoofing: I's a technique used in spam and phishing attacks to trick users into thinking a message came from a person or entity they either know or can trust.
 
 example: `_dmarc.example.com	TXT	"v=DMARC1;p=quarantine;pct=25;rua=mailto:dmarcreports@example.com"`
 - [Specification](https://docs.aws.amazon.com/ses/latest/dg/send-email-authentication-dmarc.html)
