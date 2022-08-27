@@ -7,6 +7,7 @@
 ---
 `DKIM` : Validate the domain.
       DomainKeys Identified Mail (DKIM) is an email security standard designed to make sure that an email that claims to have come from a specific domain was indeed authorized by the owner of that domain.
+      `DKIM authentication can only be set at the domain level.` 
 
 - [Specification](https://docs.aws.amazon.com/ses/latest/dg/send-email-authentication-dkim.html)
 
@@ -20,7 +21,8 @@ example: `<subdomain>.<domain>	TXT	"v=spf1 include:example.com include:amazonses
 - [Specification](https://docs.aws.amazon.com/ses/latest/dg/send-email-authentication-spf.html)
 
 ---
-`DMARC` : Domain-based Message Authentication, Reporting and Conformance (DMARC) is an email authentication protocol that uses Sender Policy Framework (SPF) and DomainKeys Identified Mail (DKIM) to detect email spoofing. In order to comply with DMARC, messages must be authenticated through either SPF or DKIM, or both.
+`DMARC` : Domain-based Message Authentication, Reporting and Conformance (DMARC) is an email authentication protocol that uses Sender Policy Framework (SPF) and DomainKeys Identified Mail (DKIM) to detect email spoofing. 
+      In order to comply with DMARC, messages must be authenticated through either SPF or DKIM, or both.
 
 example: `_dmarc.example.com	TXT	"v=DMARC1;p=quarantine;pct=25;rua=mailto:dmarcreports@example.com"`
 - [Specification](https://docs.aws.amazon.com/ses/latest/dg/send-email-authentication-dmarc.html)
